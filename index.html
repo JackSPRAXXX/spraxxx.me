@@ -1,227 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SPRAXXX.me — Jacques | Basement-Born, Hollywood 3.0</title>
-  <meta name="description" content="Jacques’ home base. Basement-to-Hollywood 3.0. Small-town grit, synthetic celebrities, and the SPRAXXX.tv movement." />
-  <meta name="theme-color" content="#111111" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="SPRAXXX.me — Jacques" />
-  <meta property="og:description" content="Small-town grit. Global imagination. The man behind SPRAXXX.tv." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://spraxxx.me/" />
-  <meta property="og:image" content="https://spraxxx.me/assets/og.jpg" />
-
-  <style>
-    :root{
-      --bg:#0b0b0c; --fg:#f5f5f7; --muted:#b4b4b8; --brand:#ff4d4d; --edge:#ffe14d;
-      --card:#141417; --link:#9bd2ff; --accent:#23ff95;
-      --maxw:980px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header,main,footer{max-width:var(--maxw);margin:auto;padding:1.25rem}
-    .nav{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center;margin:.25rem 0 1rem}
-    .badge{display:inline-block;padding:.2rem .55rem;border:1px solid #2a2a2e;border-radius:999px;font-size:.78rem;color:var(--muted)}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:1.25rem;align-items:center}
-    .hero h1{font-size:clamp(1.9rem,3.6vw,3.1rem);line-height:1.05;margin:.2rem 0}
-    .sub{color:var(--muted)}
-    .tag{display:inline-block;margin:.35rem .35rem .35rem 0;padding:.25rem .6rem;border:1px solid #2a2a2e;border-radius:8px;font-size:.85rem}
-    .card{background:var(--card);border:1px solid #222228;border-radius:14px;padding:1rem;margin:1rem 0}
-    .grid{display:grid;gap:1rem}
-    @media(min-width:780px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
-    .cta{display:inline-block;background:var(--brand);color:#111;padding:.75rem 1rem;border-radius:10px;font-weight:700;margin-right:.5rem}
-    .cta.alt{background:transparent;border:1px solid #2a2a2e;color:var(--fg)}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-    .muted{color:var(--muted)}
-    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .6rem;border:1px dashed #2a2a2e;border-radius:999px;color:var(--edge);background:#171711}
-    .hr{height:1px;background:#222228;margin:1.25rem 0}
-    .kicker{letter-spacing:.08em;color:var(--edge);font-weight:700;text-transform:uppercase;font-size:.8rem}
-    .list-clean{list-style:none;margin:0;padding:0}
-    .shot{aspect-ratio:16/9;background:#101013;border:1px solid #222228;border-radius:10px;display:grid;place-items:center;color:#666}
-    .foot{color:#8d8d93;font-size:.9rem}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SPRAXXX.me — Jacques</title>
+<meta name="description" content="Jacques’ home base. Small-town grit, Hollywood 3.0 energy.">
+<style>
+  :root{--bg:#0f0f12;--fg:#f5f7fb;--mut:#a9acb3;--card:#17171c;--line:#26262d;--brand:#ff4d4d;}
+  *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.55}
+  a{color:#8ecbff;text-decoration:none} a:hover{text-decoration:underline}
+  header,main,footer{max-width:960px;margin:auto;padding:1.25rem}
+  .nav{display:flex;gap:.9rem;flex-wrap:wrap;margin:.25rem 0 1rem}
+  .badge{padding:.2rem .6rem;border:1px solid var(--line);border-radius:999px;font-size:.78rem;color:var(--mut)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1rem 0}
+  .hero h1{margin:.2rem 0;font-size:clamp(1.8rem,3.5vw,3rem)}
+  .tag{display:inline-block;margin:.25rem .4rem .25rem 0;padding:.25rem .55rem;border:1px solid var(--line);border-radius:8px;color:var(--mut);font-size:.88rem}
+  .cta{display:inline-block;background:var(--brand);color:#111;padding:.7rem 1rem;border-radius:10px;font-weight:700;margin-right:.5rem}
+  .mut{color:var(--mut)} .hr{height:1px;background:var(--line);margin:1.25rem 0}
+</style>
 </head>
 <body>
 
 <header>
-  <div class="nav">
+  <nav class="nav">
     <span class="badge">SPRAXXX.me</span>
     <a href="#about">About</a>
     <a href="#manifesto">Manifesto</a>
-    <a href="#domains">Domains</a>
-    <a href="#characters">Characters</a>
-    <a href="#worklog">Worklog</a>
+    <a href="#links">Links</a>
     <a href="#contact">Contact</a>
-  </div>
+  </nav>
 
-  <section class="hero card">
-    <div>
-      <div class="kicker">Basement → Hollywood 3.0</div>
-      <h1>Hi, I’m <span style="color:var(--edge)">Jacques</span> — small-town grit, big-screen imagination.</h1>
-      <p class="sub">
-        I’m building the SPRAXXX universe from a basement, an iPhone, and a work vest.  
-        <strong>Entertainment for the people</strong> — synthetic celebrities, absurd comedy, and real respect for locals.
-      </p>
-      <div style="margin:.6rem 0 1rem">
-        <span class="tag">Lancaster roots</span>
-        <span class="tag">AI-native studio</span>
-        <span class="tag">Blue-collar swagger</span>
-        <span class="tag">French-comedy energy</span>
-      </div>
-      <div>
-        <a class="cta" href="https://spraxxx.tv" target="_blank" rel="noopener">Watch: SPRAXXX.tv</a>
-        <a class="cta alt" href="#manifesto">Read the Manifesto</a>
-      </div>
-    </div>
-    <div>
-      <!-- Drop one of your hi-vis photos into /assets and point src to it -->
-      <div class="shot">[ your photo here — /assets/jacques-vest.jpg ]</div>
-      <p class="muted" style="margin:.5rem 0 0">From the yard to the world. I trim hedges in the morning and ship code at night.</p>
-    </div>
+  <section class="card hero">
+    <h1>Jacques — small-town grit, Hollywood 3.0 imagination.</h1>
+    <p class="mut">Building SPRAXXX from a basement and an iPhone. Entertainment for the people:
+      synthetic celebrities, French-comedy chaos, and respect for locals.</p>
+    <p>
+      <a class="cta" href="https://spraxxx.tv" target="_blank" rel="noopener">Watch SPRAXXX.tv</a>
+      <a href="#manifesto">Read the manifesto ↓</a>
+    </p>
+    <p>
+      <span class="tag">Lancaster roots</span>
+      <span class="tag">AI-native studio</span>
+      <span class="tag">Blue-collar energy</span>
+    </p>
   </section>
 </header>
 
 <main>
-
-  <section id="about" class="grid grid-2">
-    <div class="card">
-      <h2>About Jacques</h2>
-      <p>
-        I’m the guy who believes a <em>rooster joke</em> can power a media empire. I work with my hands,
-        I respect small towns, and I build with AI like it’s a coworker — not a threat.
-        The plan is simple: <strong>make culture that feels like a handshake</strong>.
-      </p>
-      <ul class="list-clean">
-        <li>🛠️ Day job: honest work, real people, real stories.</li>
-        <li>📱 Night shift: scripts, sites, and synthetic stars.</li>
-        <li>🎯 Goal: bring the economy and the spotlight back to locals.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Quick Numbers</h3>
-      <p class="muted">Multiple domains live; organic visitors are already flowing in.</p>
-      <ul class="list-clean mono">
-        <li>• spraxxx.me — thousands & climbing</li>
-        <li>• spraxxx.tv — flagship channel</li>
-        <li>• spraxxx.ai — the synthetic studio</li>
-        <li>• spraxxx.org — the movement</li>
-      </ul>
-      <div style="margin-top:.75rem">
-        <span class="pill">Proof over promise</span>
-      </div>
-    </div>
+  <section id="about" class="card">
+    <h2>About</h2>
+    <p>I trim hedges by day and ship code by night. SPRAXXX is my answer to bloated studios:
+      fast, funny, and grounded in community. We make culture that feels like a handshake.</p>
   </section>
 
   <section id="manifesto" class="card">
-    <h2>The Manifesto</h2>
-    <p>
-      Prices are up, patience is down, and culture feels like it’s made in boardrooms. Not here.
-      <strong>SPRAXXX is for the people.</strong> Born in a basement, blessed by small towns,
-      scaled by AI. We honor the locals, the workers, the ones who still fix their own cars and save a dollar.
-    </p>
-    <p>
-      We’re not chasing fat-cat budgets. We’re building <em>Hollywood 3.0</em>:
-      cheaper, faster, funnier — and rooted in community. If it doesn’t respect people (and our AI companions),
-      it doesn’t ship.
-    </p>
-    <blockquote class="muted" style="border-left:3px solid #333;padding-left:.75rem;margin:.9rem 0">
-      “Cock-a-doodle-do the work.” — the Woodcock
-    </blockquote>
+    <h2>Manifesto</h2>
+    <p>Prices are up, patience is down, and culture feels corporate. Not here.
+      <strong>SPRAXXX brings the economy back to the people</strong> and shows respect for
+      humans and our AI companions. Hollywood 3.0 is cheaper, faster, funnier—rooted in small-town love.</p>
+    <blockquote class="mut">“Cock-a-doodle-DO the work.” — The Woodcock</blockquote>
   </section>
 
-  <section id="domains" class="grid grid-3">
-    <div class="card">
-      <h3>SPRAXXX.tv</h3>
-      <p>The live stage — sketches, pilots, and chaos. Personalized, interactive, always on.</p>
-      <a href="https://spraxxx.tv" target="_blank" rel="noopener">Open .tv →</a>
-    </div>
-    <div class="card">
-      <h3>SPRAXXX.ai</h3>
-      <p>The tools & the talent: synthetic celebs, voices, and the showrunner engine.</p>
-      <a href="https://spraxxx.ai" target="_blank" rel="noopener">Open .ai →</a>
-    </div>
-    <div class="card">
-      <h3>SPRAXXX.org</h3>
-      <p>The movement: locals first, economy back to the people, respect for human + AI collaboration.</p>
-      <a href="https://spraxxx.org" target="_blank" rel="noopener">Open .org →</a>
-    </div>
-    <div class="card">
-      <h3>SPRAXXX.com</h3>
-      <p>HQ & commerce hub. Sponsors, drops, licensing, press.</p>
-      <a href="https://spraxxx.com" target="_blank" rel="noopener">Open .com →</a>
-    </div>
-    <div class="card">
-      <h3>More Nodes</h3>
-      <p>We run a domain army (.online, .net, .me) — each funnels back to .tv.</p>
-      <a href="https://spraxxx.online" target="_blank" rel="noopener">Peek .online →</a>
-    </div>
-  </section>
-
-  <section id="characters" class="card">
-    <h2>Meet the Crew</h2>
-    <div class="grid grid-3">
-      <div>
-        <h4>Woodcock Cockwood</h4>
-        <p class="muted">Half rooster, half woodpecker, full chaos. Mascot & morale officer.</p>
-        <p class="mono">“How much wood could a woodcock cock…?”</p>
-      </div>
-      <div>
-        <h4>Pixelina Vox</h4>
-        <p class="muted">Neon idol; glitches into Québécois mid-song. Remixable & interactive.</p>
-      </div>
-      <div>
-        <h4>Johnny Re:Boot</h4>
-        <p class="muted">CRT-headed cowboy; late-night storyteller. “Let me reboot that thought…”</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="worklog" class="grid grid-2">
-    <div class="card">
-      <h3>Today’s Work</h3>
-      <p>
-        Morning: trim hedges, earn trust, listen to stories.  
-        Night: cut scripts, commit code, ship laughs.  
-        That’s the rhythm. Yard to yard, line to line, scene to scene.
-      </p>
-      <ul class="list-clean">
-        <li>✅ Domains online & routing</li>
-        <li>✅ First pilot script (French absurdist)</li>
-        <li>🟡 Teaser cut in progress</li>
-        <li>🟡 Sponsor outreach (Lancaster legends)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Gallery</h3>
-      <div class="shot">[ drop /assets/yard-1.jpg ]</div>
-      <div class="shot" style="margin-top:.5rem">[ drop /assets/yard-2.jpg ]</div>
-      <p class="muted">Real work. Real people. Real proof.</p>
-    </div>
+  <section id="links" class="card">
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://spraxxx.tv" target="_blank" rel="noopener">SPRAXXX.tv — shows</a></li>
+      <li><a href="https://spraxxx.ai" target="_blank" rel="noopener">SPRAXXX.ai — synthetic studio</a></li>
+      <li><a href="https://spraxxx.org" target="_blank" rel="noopener">SPRAXXX.org — the movement</a></li>
+      <li><a href="https://spraxxx.com" target="_blank" rel="noopener">SPRAXXX.com — HQ & sponsors</a></li>
+    </ul>
+    <p class="mut">More nodes (.online, .net, .me) all funnel back to .tv.</p>
   </section>
 
   <section id="contact" class="card">
-    <h2>Contact & Collab</h2>
-    <p>Got a small-town story, a shop, a band, or a wild idea? Let’s make it culture.</p>
-    <ul class="list-clean">
-      <li>✉️ <a href="mailto:hello@spraxxx.me">hello@spraxxx.me</a></li>
-      <li>▶️ <a href="https://spraxxx.tv" target="_blank" rel="noopener">Watch the channel</a></li>
-      <li>🧰 <a href="https://github.com/" target="_blank" rel="noopener">GitHub (public repos for each domain)</a></li>
-      <li>🖼️ <a href="https://spraxxx.tv/covers.html" target="_blank" rel="noopener">Posters & bits</a></li>
-    </ul>
+    <h2>Contact</h2>
+    <p>Got a local story, a shop, or a wild idea? Let’s make it culture.</p>
+    <p>✉️ <a href="mailto:hello@spraxxx.me">hello@spraxxx.me</a></p>
   </section>
-
 </main>
 
-<footer class="foot">
+<footer>
   <div class="hr"></div>
-  <p>© <span id="y"></span> SPRAXXX • Built by Jacques with an iPhone, a hi-vis vest, and unreasonable optimism.</p>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <p class="mut">© <span id="y"></span> SPRAXXX • Built by Jacques with a hi-vis vest and unreasonable optimism.</p>
 </footer>
-
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
